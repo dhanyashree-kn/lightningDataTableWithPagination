@@ -1,0 +1,38 @@
+<template>
+    <h1>Lightning Data Table</h1>
+
+    <lightning-datatable
+            key-field="id"
+            data={data}
+            columns={columns}
+            hide-checkbox-column="true">
+    </lightning-datatable>
+
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item>
+            <lightning-button icon-name="utility:left" 
+                    onclick={handleFirstEvent}
+                    disabled={showFirstButton}>
+            </lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button icon-name="utility:chevronleft" 
+                    onclick={handleOnPrevious}
+                    disabled={showFirstButton}>
+            </lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button icon-name="utility:chevronright" 
+                    onclick={handleOnNext}
+                    disabled={showLastButton}>
+            </lightning-button>
+        </lightning-layout-item>
+        <lightning-layout-item>
+            <lightning-button icon-name="utility:right"
+                    disabled={showLastButton}
+                    onclick={handleLastEvent}>
+            </lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
+</template>
