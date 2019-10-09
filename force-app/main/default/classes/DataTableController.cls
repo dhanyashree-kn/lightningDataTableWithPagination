@@ -1,5 +1,8 @@
 public with sharing class DataTableController {
 	
+
+ //using custom meta data type so that admin can add more fields 
+    //based on the requirement without modifying the code
     @AuraEnabled(cacheable=true)
     public static list<sObject> getRecords(String sObjectType) {
 		
